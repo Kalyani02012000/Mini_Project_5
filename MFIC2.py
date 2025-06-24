@@ -30,7 +30,7 @@ if uploaded_file is not None:
 
     # Preprocess the image
     st.write("⏳ Processing image...")
-    img = img.resize((224, 224))  # Or (299, 299) if InceptionV3
+    img = img.resize((224, 224))  
     img_array = image.img_to_array(img)
     img_array = np.expand_dims(img_array, axis=0)
     img_array /= 255.0  # Normalize like training
